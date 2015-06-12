@@ -10,6 +10,9 @@
 		6541E17D1B2B112700A78989 /* sVpo.h in Headers */ = {isa = PBXBuildFile; fileRef = 6541E17C1B2B112700A78989 /* sVpo.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		6541E1831B2B112700A78989 /* sVpo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6541E1771B2B112700A78989 /* sVpo.framework */; };
 		6541E18A1B2B112700A78989 /* sVpoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6541E1891B2B112700A78989 /* sVpoTests.swift */; };
+		6541E1941B2B120800A78989 /* sVpo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6541E1931B2B120800A78989 /* sVpo.swift */; };
+		6541E1951B2B120800A78989 /* sVpo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6541E1931B2B120800A78989 /* sVpo.swift */; };
+		6565E2EE1B2B25E200EF0336 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 6565E2ED1B2B25E200EF0336 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,8 @@
 		6541E1821B2B112700A78989 /* sVpoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = sVpoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6541E1881B2B112700A78989 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6541E1891B2B112700A78989 /* sVpoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sVpoTests.swift; sourceTree = "<group>"; };
+		6541E1931B2B120800A78989 /* sVpo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = sVpo.swift; sourceTree = "<group>"; };
+		6565E2ED1B2B25E200EF0336 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +78,7 @@
 			children = (
 				6541E17C1B2B112700A78989 /* sVpo.h */,
 				6541E17A1B2B112700A78989 /* Supporting Files */,
+				6541E1931B2B120800A78989 /* sVpo.swift */,
 			);
 			path = sVpo;
 			sourceTree = "<group>";
@@ -80,6 +86,7 @@
 		6541E17A1B2B112700A78989 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				6565E2ED1B2B25E200EF0336 /* README.md */,
 				6541E17B1B2B112700A78989 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -209,6 +216,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6565E2EE1B2B25E200EF0336 /* README.md in Sources */,
+				6541E1941B2B120800A78989 /* sVpo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6541E18A1B2B112700A78989 /* sVpoTests.swift in Sources */,
+				6541E1951B2B120800A78989 /* sVpo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -318,6 +328,7 @@
 		6541E18E1B2B112700A78989 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -328,13 +339,18 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALID_ARCHS = "i386 x86_64 armv7 armv7 arm64";
 			};
 			name = Debug;
 		};
 		6541E18F1B2B112700A78989 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -345,7 +361,10 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
+				VALID_ARCHS = "i386 x86_64 armv7 armv7 arm64";
 			};
 			name = Release;
 		};
@@ -364,6 +383,8 @@
 				INFOPLIST_FILE = sVpoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
+				VALID_ARCHS = "i386 x86_64 armv7s armv7 arm64";
 			};
 			name = Debug;
 		};
@@ -378,6 +399,8 @@
 				INFOPLIST_FILE = sVpoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
+				VALID_ARCHS = "i386 x86_64 armv7s armv7 arm64";
 			};
 			name = Release;
 		};
@@ -400,6 +423,7 @@
 				6541E18F1B2B112700A78989 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		6541E1901B2B112700A78989 /* Build configuration list for PBXNativeTarget "sVpoTests" */ = {
 			isa = XCConfigurationList;
@@ -408,6 +432,7 @@
 				6541E1921B2B112700A78989 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -1,0 +1,8 @@
+language: objective-c
+osx_image: beta-xcode6.3
+
+xcode_project: sVpo.xcodeproj
+xcode_scheme:
+- sVpo
+xcode_sdk:
+- macosx10.10
