@@ -1,10 +1,8 @@
 # sVPO
 
-[![Build Status](https://travis-ci.org/unlucio/svpo.svg?branch=master)](https://travis-ci.org/unlucio/svpo)
-
 #### Value/path helper library for NSDictionaries in swift
 
-sVpo is a swift porting of [vpo](https://github.com/unlucio/vpo). It's a set of simple functions that let you query your NDSdictionary content using dot notation expressed paths.
+sVpo is a swift porting of [vpo](https://github.com/unlucio/vpo). It's a set of simple functions that let you query your NSDdictionaries' content using dot notation expressed paths.
 
 ## How to get it:
 
@@ -60,24 +58,24 @@ var vpo:sVpo = sVpo(dict: baseObj)
 getting a value:
 
 ```swift
-vpo.get('key1.foo2.bar2');
+vpo.get("key1.foo2.bar2");
 ```
 
 getting a value od a default value:
 
 ```swift
-vpo.get('key1.foo2.bar2', faultback: "Default");
+vpo.get("key1.foo2.bar2", faultback: "Default");
 ```
 
 getting a value from a list of possible paths:
 
 ```swift
-vpo.some(['ke5.foo2.bar2', 'key1.foo2.bar2']);
+vpo.some(["ke5.foo2.bar2", "key1.foo2.bar2"]);
 ```
 
 getting a value from a list of possible paths:
 
 ```swift
-vpo.some(['ke5.foo2.bar2', 'key1.foo2.bar2'], faultback: "Default");
+vpo.some(["ke5.foo2.bar2", "key1.foo2.bar2"], faultback: "Default");
 ```
 
