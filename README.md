@@ -1,8 +1,10 @@
 # sVPO
 
+[![Build Status](https://travis-ci.org/unlucio/svpo.svg?branch=master)](https://travis-ci.org/unlucio/svpo)
+
 #### Value/path helper library for NSDictionaries in swift
 
-sVpo is a swift porting of [vpo](https://github.com/unlucio/vpo). It's a set of simple functions that let you query your NSDdictionaries' content using dot notation expressed paths.
+sVpo is a swift porting of [vpo](https://github.com/unlucio/vpo). It's a set of simple functions that let you query your NSDdictionariesi' content using dot notation expressed paths.
 
 ## How to get it:
 
