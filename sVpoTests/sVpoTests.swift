@@ -14,7 +14,7 @@ class sVpoTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        var baseObj: NSDictionary = [
+        let baseObj: NSDictionary = [
             "key1": [
                 "foo1": [
                     "bar1": "bao",
@@ -41,7 +41,7 @@ class sVpoTests: XCTestCase {
             ]
         ]
         
-        self.vpo = sVpo(dict: baseObj)
+        self.vpo = sVpo(dictionary: baseObj)
     }
     
     override func tearDown() {
@@ -50,67 +50,44 @@ class sVpoTests: XCTestCase {
     
     func testDoenstCrashonRandomPath() {
         self.vpo.get("key1.blah.bar2");
-        println("BOT PASSING!!!")
+        print("BOT PASSING!!!")
         XCTAssert(true, "Pass")
     }
     
     func testCanGetAValue() {
-        var result: String = self.vpo.get("key1.foo2.bar2") as! String
+        let result: String = self.vpo.get("key1.foo2.bar2") as! String
         
         XCTAssert(result == "bao", "Cannot get value 'bao' from 'key1.foo2.bar2' path")
     }
     
     func testReturnsFallbackValueIfProvidedAndOtCannotFindPath() {
-        var result: String = self.vpo.get("AGH", faultback: "not found") as! String
+        let result: String = self.vpo.get("AGH", faultback: "not found") as! String
         XCTAssert(result == "not found", "Failed retriving value for unexisting key 'AGH' returns default value 'not found'")
     }
     
     func testReturnsFallbackValueIfProvidedAndOtCannotFindPathDeep() {
-        var result: String = self.vpo.get("AGH.some.Error", faultback: "not found") as! String
+        let result: String = self.vpo.get("AGH.some.Error", faultback: "not found") as! String
         XCTAssert(result == "not found", "Retriving value for unexisting key 'AGH.some.Error' returns default value 'not found'")
     }
     
     func testReturnsNilValueIfNoFaultbackIsProvidedAndCannotFindPath() {
-        var result: AnyObject? = self.vpo.get("AGH")
+        let result: AnyObject? = self.vpo.get("AGH")
         XCTAssert(result == nil, "Failed retriving value for unexisting key 'AGH' returns nil if no default value is given")
     }
     
     
     func testCanFindThe1stUsableMatchingValueInAnArrayOfPaths() {
-        var result: String = self.vpo.some(["key2.foo1.bar3", "key2.foo1.bar2", "key1.foo2.bar2"]) as! String
+        let result: String = self.vpo.some(["key2.foo1.bar3", "key2.foo1.bar2", "key1.foo2.bar2"]) as! String
         XCTAssert(result == "bao", "Cannot get value 'bao' from paths list: key2.foo1.bar3, key2.foo1.bar2, key1.foo2.bar2")
     }
     
     func testReturnsNilValueIfNoFaultbackIsProvidedAndCannotFindPathinPathsList() {
-        var result: AnyObject? = self.vpo.some(["key2.foo6.bar3", "key2.foo5.bar2", "key1.foo9.bar2"])
+        let result: AnyObject? = self.vpo.some(["key2.foo6.bar3", "key2.foo5.bar2", "key1.foo9.bar2"])
         XCTAssert(result == nil, "Failed retriving nil form list of unexistent paths: key2.foo6.bar3, key2.foo5.bar2, key1.foo9.bar2")
     }
     
     func testReturnsDefaultValueIfNoFaultbackIsProvidedAndCannotFindPathinPathsList() {
-        var result: String = self.vpo.some(["key2.foo6.bar3", "key2.foo5.bar2", "key1.foo9.bar2"], faultback: "Default") as! String
+        let result: String = self.vpo.some(["key2.foo6.bar3", "key2.foo5.bar2", "key1.foo9.bar2"], faultback: "Default") as! String
         XCTAssert(result == "Default", "Failed retriving nill form list of unexistent paths: key2.foo6.bar3, key2.foo5.bar2, key1.foo9.bar2")
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
