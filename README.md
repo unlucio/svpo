@@ -54,7 +54,7 @@ Create a new vpo object:
 ```swift
 import sVpo
 
-var vpo:sVpo = sVpo(dict: baseObj)
+var vpo:sVpo = sVpo(dictionary: baseObj)
 ```
 
 getting a value:

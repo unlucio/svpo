@@ -12,7 +12,6 @@
 		6541E18A1B2B112700A78989 /* sVpoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6541E1891B2B112700A78989 /* sVpoTests.swift */; };
 		6541E1941B2B120800A78989 /* sVpo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6541E1931B2B120800A78989 /* sVpo.swift */; };
 		6541E1951B2B120800A78989 /* sVpo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6541E1931B2B120800A78989 /* sVpo.swift */; };
-		6565E2EE1B2B25E200EF0336 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 6565E2ED1B2B25E200EF0336 /* README.md */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,7 +164,9 @@
 		6541E16E1B2B112700A78989 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0630;
+				LastSwiftMigration = 0730;
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = "Luciano Colosio";
 				TargetAttributes = {
 					6541E1761B2B112700A78989 = {
@@ -216,7 +217,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6565E2EE1B2B25E200EF0336 /* README.md in Sources */,
 				6541E1941B2B120800A78989 /* sVpo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -262,6 +262,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -338,6 +339,7 @@
 				INFOPLIST_FILE = sVpo/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "unlucio.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -360,6 +362,7 @@
 				INFOPLIST_FILE = sVpo/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "unlucio.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
@@ -382,6 +385,7 @@
 				);
 				INFOPLIST_FILE = sVpoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "unlucio.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				VALID_ARCHS = "i386 x86_64 armv7s armv7 arm64";
@@ -398,6 +402,7 @@
 				);
 				INFOPLIST_FILE = sVpoTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "unlucio.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SUPPORTED_PLATFORMS = "macosx iphonesimulator iphoneos";
 				VALID_ARCHS = "i386 x86_64 armv7s armv7 arm64";
